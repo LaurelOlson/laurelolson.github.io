@@ -1,0 +1,60 @@
+#main-img {
+  width: 100%;
+}
+
+#about {
+  text-align: justify;
+}
+
+#home-img {
+  margin-top: 20px;
+}
+
+#nav-btns {
+  border-bottom: 1px solid black;
+  height: 64px;
+}
+
+.navbar-fixed {
+  display: none;
+}
+
+.container {
+  text-align: center;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -64px;
+}
+
+nav {
+  background: #FFFFFF;
+  box-shadow: none;
+}
+
+nav ul a {
+  color: #AAA8A8;
+}
+
+nav ul a:hover {
+  background: transparent;
+}
+
+nav ul li.active a {
+  transition: 1s color;
+  color: #000000;
+}
+
+nav ul li.active {
+  background: transparent;
+}
+
+nav ul li {
+  color: #000000;
+}
+
+section {
+  border-bottom: 1px solid black;
+}

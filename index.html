@@ -1,23 +1,133 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VanHackHERS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <div class="container">
+            <div id="nav-btns" class="col s12">
+              <ul class="left hide-on-med-and-down">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      <a class="anchor" id="home"></a>
+      <div id="home-img" class="row">
+        <div class="col s8 offset-s2">
+          <img id="main-img" src="background.jpg">
+        </div>
+      </div>
+      <section>
+        <header id="header">
+          <h3>VanHackHERS</h3>
+        </header>
+      </section>
+      <section>
+        <div class="row">
+          <a class="anchor" id="about"></a>
+          <div class="col s6 offset-s3">
+            <p>We are a group of female web developers and tech professionals determined to do good while juggling the everyday roller coaster of full-time jobs, pets, relationships, and side hustles. We are united in our passion to contribute to our communities in tangible ways, to uplift marginalized groups, to encourage young women into tech, and to promote professional women within the tech industry.</p>
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+            <p>We care a lot about this stuff, because it matters. If you also care, let us help you.</p>
+          </div>
+        </div>
+      </section>
+      <a class="anchor" id="contact"></a>
+      <div>
+        <h4>Contact Us</h4>
+        <div class="row">
+          <form method="POST" action="http://formspree.io/laurelolson12@gmail.com" class="col s8 offset-s2">
+            <div class="row">
+              <div class="input-field col s6">
+                <input type="text" name="name" class="validate">
+                <label for="name">Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input type="email" name="email">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea class="materialize-textarea" name="problem"></textarea>
+                <label for="problem">What is the problem we can help you solve?</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea class="materialize-textarea" name="description"></textarea>
+                <label for="description">Please provide us with a concise, birds-eye-view description of your project.</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea class="materialize-textarea" name="features"></textarea>
+                <label for="features">What are the core features (if any) that are essential?</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <label>Do you have a deadline?</label>
+              </div>
+              <div class="input-field col s12">
+                <div class="row">
+                  <div class="col s12">
+                    <p>
+                      <input type="radio" class="with-gap" name="deadline_exists" value="yes" id="deadlineExistsYes">
+                      <label for="deadlineExistsYes">Yes</label>
+                    </p>
+                    <p>
+                      <input type="radio" class="with-gap" name="deadline_exists" value="yes" id="deadlineExistsNo">
+                      <label for="deadlineExistsNo">No</label>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" class="datepicker" name="deadline_date" id="deadlineDate">
+                <label for="deadlineDate">If so, what is your deadline?</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea class="materialize-textarea" name="oversight"></textarea>
+                <label for="oversight">How much oversight will you provide?</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea class="materialize-textarea" name="reason"></textarea>
+                <label for="reason">Why should we take on your project?</label>
+              </div>
+            </div>            
+            <button type="submit">Submit</button>
+          </form>
+          <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdn1t2P9WaaV7rPUDHEBoW4owTevzYBDXtGP_BBHFG-QVsy7w/viewform?embedded=true" width="576" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading contact form...</iframe> -->
+        </div>
+      </div>
+      <footer>
+        <p>© VanHackHERS 2017</p>
+      </footer>
+    </div>
+  </body>
+</html>
